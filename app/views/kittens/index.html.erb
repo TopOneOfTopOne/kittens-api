@@ -1,0 +1,14 @@
+<% @title = "Index" %> 
+<% unless @kittens.empty? %>
+    <ul>
+        <% @kittens.each do |kitten| %>
+            <li>
+                Fluffy Kitten: <%= link_to kitten.name, kitten_path(kitten.id) %>
+            </li>
+        <% end %>
+    </ul>
+<% else %>
+    <p>No kittens left.... go make more</p>
+<% end %>
+<p><%= link_to "Make more kittens click here", new_kitten_path %></p>
+    

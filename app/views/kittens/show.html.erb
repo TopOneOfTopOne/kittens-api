@@ -1,0 +1,9 @@
+<% @title = "fluffy kitten "+@kitten.name %>
+<p>
+    Age: <%= @kitten.age %>
+    Cuteness: <%= @kitten.cuteness %>
+    softness: <%= @kitten.softness %>
+    <%= link_to "Edit Kitten", edit_kitten_path(@kitten.id) %>
+    <%= link_to "Destroy Kitten", kitten_path(@kitten.id), method: 'delete' %>
+</p>
+<%= link_to "Back to index", root_path %>
